@@ -679,7 +679,7 @@ where
     writer.write_u32::<LE>(800)?; // TODO: why is this hardcoded?? come on adam
                                     // maybe others are too ?
     let mut enc = ZlibWriter::new();
-    enc.write_u32::<LE>(info.bg_color.into())?;
+    enc.write_u32::<LE>(info.bg_colour.into())?;
     enc.write_u32::<LE>(info.new_window as u32)?;
     enc.write_pas_string(&info.caption)?;
     enc.write_i32::<LE>(info.left)?;
